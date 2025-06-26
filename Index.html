@@ -197,7 +197,7 @@ function calcular() {
     const forcaPeso = massa * gravidade;
     const forcaCabo = forcaPeso / polias;
     const torqueNominal = forcaCabo * (diametro / 2);
-    const potenciaMecanica = (forcaPeso * velocidade) / (1000 * polias);
+    const potenciaMecanica = (forcaPeso * velocidade) / 1000;
     const potenciaMotor = (potenciaMecanica / (eficiencia * eficiencia_redutor)) * fatorServico;
     const rotacaoTambor = (velocidade / (Math.PI * diametro)) * 60;
     const relacaoReducao = "1:" + Math.ceil(velocidade_motor / rotacaoTambor);
